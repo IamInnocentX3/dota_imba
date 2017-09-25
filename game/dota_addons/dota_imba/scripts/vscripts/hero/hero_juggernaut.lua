@@ -614,6 +614,7 @@ end
 function modifier_imba_juggernaut_healing_ward_passive:DeclareFunctions()
 	funcs = { 
 		MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE,
+		MODIFIER_PROPERTY_DISABLE_HEALING,
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
 		MODIFIER_EVENT_ON_DEATH
 	}
@@ -622,6 +623,10 @@ end
 
 function modifier_imba_juggernaut_healing_ward_passive:GetModifierIncomingDamage_Percentage()
 	return -100
+end
+
+function modifier_imba_juggernaut_healing_ward_passive:GetDisableHealing()
+        return true
 end
 
 function modifier_imba_juggernaut_healing_ward_passive:OnAttackLanded(params) -- health handling
